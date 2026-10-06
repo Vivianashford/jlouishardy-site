@@ -49,7 +49,7 @@ img{display:block;max-width:100%;height:auto}
 }
 .btn:hover{background:#333;border-color:#333;color:#fff}
 .btn[disabled]{opacity:.6;cursor:default}
-.btn.small{min-height:40px;padding:0 16px;font-size:15px}
+.btn.small{min-height:40px;padding:0 16px;font-size:15px;color:#fff}
 .btn.big{min-height:62px;padding:0 34px;font-size:19px;font-weight:700;border-radius:8px}
 .btn.quiet{background:transparent;color:var(--ink)}
 .btn.quiet:hover{background:#F1F1F1;color:var(--ink);border-color:var(--ink)}
