@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your book is ready: The Laws of Change</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cline x1='11' y1='19.5' x2='21' y2='12.5' stroke='%23B08D4A' stroke-width='1.4'/%3E%3Ccircle cx='9' cy='21' r='5.5' fill='%23B08D4A'/%3E%3Ccircle cx='23' cy='11' r='5' fill='%23FFFFFF' stroke='%23B08D4A' stroke-width='2'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<!-- The 20-minute call link lives in CALL_URL in the script at the bottom. -->
+</head>
+<body class="arrived">
+<a class="skip" href="#main">Skip to the page</a>
+
+<header class="head">
+  <div class="shell head-in">
+    <a class="brand" href="/" aria-label="Jean Louis Hardy, home">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><line x1="11" y1="19.5" x2="21" y2="12.5" stroke="#B08D4A" stroke-width="1.4"/><circle cx="9" cy="21" r="5.5" fill="#B08D4A"/><circle cx="23" cy="11" r="5" fill="#FFFFFF" stroke="#B08D4A" stroke-width="2"/></svg>
+      Jean Louis Hardy
+    </a>
+    <nav class="nav" aria-label="Page">
+      <a class="plain" href="#start">Where to start</a>
+      <a class="btn small" href="#group">Book a call</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div class="shell">
+
+  <section class="hero">
+    <div class="col" style="margin:0 auto">
+      <p class="done-mark"><i aria-hidden="true"></i><span id="hello">You're in.</span></p>
+      <h1 style="margin-top:14px">Your book is ready.</h1>
+      <div class="offer-card">
+        <svg class="cover" viewBox="0 0 360 540" width="132" height="198" role="img" aria-label="Cover of The Laws of Change by Jean Louis Hardy"><rect width="360" height="540" fill="#fff"/><circle cx="282" cy="168" r="154" fill="none" stroke="#B08D4A" stroke-width="3"/><line x1="62" y1="343" x2="162" y2="264" stroke="#C0392B" stroke-width="1.5"/><circle cx="55" cy="349" r="8" fill="#8E6B2C"/><text x="47" y="383" font-family="Open Sans,Helvetica,Arial,sans-serif" font-size="10" fill="#5C6268">Jean Louis Hardy</text><text x="44" y="421" font-family="Antic Didone,Georgia,serif" font-size="38" fill="#111">The Laws</text><text x="44" y="460" font-family="Antic Didone,Georgia,serif" font-size="38" fill="#111">of Change.</text><text x="47" y="487" font-family="Open Sans,Helvetica,Arial,sans-serif" font-size="9" fill="#111">Twelve principles for becoming the change agent.</text><text x="313" y="510" text-anchor="end" font-family="Open Sans,Helvetica,Arial,sans-serif" font-size="7" fill="#5C6268">A first taste of the 381.</text></svg>
+        <div>
+          <p class="what"><strong>The Laws of Change.</strong> Twelve principles for becoming the change agent. PDF, 64 pages. Yours to keep.</p>
+          <a class="btn big" href="the-laws-of-change.pdf" download="The-Laws-of-Change-Jean-Louis-Hardy.pdf" style="width:100%">Download the book</a>
+          <p class="fine small" style="margin-top:10px">On a phone, it opens in a new screen. Tap share to save it to your books or files.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="start">
+    <div class="col" style="margin:0 auto">
+      <h2>Where to start</h2>
+      <p>Don't read it in one sitting. The reader who finishes it in an afternoon has won a race nobody else was running.</p>
+      <ol class="next-steps">
+        <li><div><strong>Read "How this book works."</strong> Pages 4 to 6. About five minutes.</div></li>
+        <li><div><strong>Write two sentences.</strong> Pick one area: faith, health, family or work. Where is it now? Where does it need to be?</div></li>
+        <li><div><strong>Read principle 1, The Gap, and do its move this week.</strong> Then give it a few days before the next one.</div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="group" class="last">
+    <div class="col" style="margin:0 auto">
+      <h2>Want to go further?</h2>
+      <div class="group">
+        <p class="lede">Join The Research Group.</p>
+        <p>We take the Laws of Change out of the book and into real companies and real homes, and compare notes on what held up.</p>
+        <ul>
+          <li>Members get the complete system: every principle, every story, every source.</li>
+          <li>You work on your own gap, alongside people working on theirs.</li>
+          <li>It starts with a free 20-minute call to see if it's a fit. No pitch. You decide.</li>
+        </ul>
+      </div>
+      <p style="margin-top:30px"><strong>Pick a time for your call:</strong></p>
+      <div class="cal" id="cal"></div>
+      <p class="cal-fallback">Calendar not showing? <a href="https://calendly.com/jean-eng2/30min" data-link="call" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+    </div>
+  </section>
+
+</div>
+</main>
+
+<footer>
+  <div class="shell">
+    <div class="col" style="margin:0 auto">
+      <span>&copy; 2026 Jean Louis Hardy &middot; Houston, Texas</span>
+      <a href="/">Home</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var CALL_URL = 'https://calendly.com/jean-eng2/30min';   /* the 20-minute call */
+  Array.prototype.forEach.call(document.querySelectorAll('[data-link=call]'), function(a){ a.href = CALL_URL; });
+
+  var reader = {};
+  try{ reader = JSON.parse(sessionStorage.getItem('loc-reader') || '{}') || {}; }catch(x){ reader = {}; }
+  if(reader.name){ document.getElementById('hello').textContent = "You're in, " + reader.name + '.'; }
+
+  /* the booking calendar, with the reader's name and email filled in */
+  var s = document.createElement('script');
+  s.src = 'https://assets.calendly.com/assets/external/widget.js'; s.async = true;
+  s.onload = function(){
+    if(!window.Calendly){ return; }
+    Calendly.initInlineWidget({
+      url: CALL_URL + '?hide_gdpr_banner=1',
+      parentElement: document.getElementById('cal'),
+      prefill: { name: reader.name || '', email: reader.email || '' }
+    });
+  };
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
