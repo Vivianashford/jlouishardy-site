@@ -128,6 +128,7 @@ p + p{margin-top:18px}
 .nods li{position:relative;padding:16px 0 16px 34px;border-top:1px solid var(--line);font-size:19px;line-height:1.5}
 .nods li:last-child{border-bottom:1px solid var(--line)}
 .nods li::before{content:"";position:absolute;left:4px;top:26px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
+.turn{margin-top:28px;font-size:19px;line-height:1.5}
 .after-nods{margin-top:24px;font-weight:600}
 
 .parts{list-style:none;margin-top:30px;counter-reset:s}
@@ -219,6 +220,7 @@ footer a{color:var(--gray-text)}
   .offer-card .what{align-self:center;margin-bottom:0}
   .get .row{grid-template-columns:1fr}
   .nods li{font-size:17px}
+  .turn{font-size:17px}
   .three{grid-template-columns:1fr;gap:12px}
   .areas .fruit{grid-template-columns:1fr;gap:8px}
   .about{grid-template-columns:96px 1fr;gap:18px}
