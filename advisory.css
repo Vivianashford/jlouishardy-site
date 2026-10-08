@@ -1,0 +1,176 @@
+/* Jean Louis Hardy - Executive Advisory - styles for advisory.html only */
+:root{
+  --bg:#0E0E0E;
+  --bg-2:#131312;
+  --card:#181715;
+  --ink:#F2EEE6;
+  --muted:#A9A398;
+  --gold:#C9A962;        /* gold for words and buttons on the dark ground */
+  --gold-line:#8F7440;   /* gold for hairlines */
+  --line:#2A2926;
+  --head:'Antic Didone',Georgia,'Times New Roman',serif;
+  --head-h:68px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head-h) + 20px);-webkit-text-size-adjust:100%}
+body{
+  background:var(--bg);color:var(--ink);
+  font-family:"Open Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  font-size:18px;line-height:1.7;font-weight:300;-webkit-font-smoothing:antialiased;
+}
+strong{font-weight:600;color:var(--ink)}
+a{color:var(--gold);text-underline-offset:3px}
+a:hover{color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:3px}
+img{display:block;max-width:100%;height:auto}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--gold);color:#111;padding:10px 14px;border-radius:4px;z-index:50}
+.skip:focus{left:16px}
+.shell{max-width:1140px;margin:0 auto;padding:0 40px}
+.narrow{max-width:760px}
+.center{text-align:center}
+
+/* header */
+.head{position:sticky;top:0;z-index:20;background:rgba(14,14,14,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.head-in{height:var(--head-h);display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none;font-weight:600;font-size:16px;letter-spacing:.02em;white-space:nowrap}
+.brand svg{width:26px;height:26px;flex:none}
+.nav{display:flex;align-items:center;gap:28px}
+.nav a.plain{color:var(--muted);text-decoration:none;font-size:14px;letter-spacing:.04em}
+.nav a.plain:hover{color:var(--ink)}
+
+/* buttons */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 30px;
+  border:1px solid var(--gold);border-radius:2px;background:transparent;color:var(--gold);
+  font:inherit;font-size:15px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;cursor:pointer;
+  transition:background .2s,color .2s,border-color .2s;
+}
+.btn.gold{background:var(--gold);color:#111}
+.btn.gold:hover{background:#DDBF7C;border-color:#DDBF7C;color:#111}
+.btn.ghost:hover{background:rgba(201,169,98,.1);color:var(--ink)}
+.btn.small{min-height:38px;padding:0 18px;font-size:12.5px}
+.btn.big{min-height:60px;padding:0 40px;font-size:15px}
+.btn[disabled]{opacity:.6;cursor:default}
+
+/* type */
+.kicker,.eyebrow,.offer-label,.press-label{font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--head);font-weight:400;color:var(--ink);letter-spacing:-.005em}
+h1{font-size:clamp(52px,7.4vw,98px);line-height:1.02;margin-top:22px}
+h2{font-size:clamp(36px,4.6vw,58px);line-height:1.1;margin-bottom:26px}
+h3{font-size:30px;line-height:1.2}
+p+p{margin-top:16px}
+
+/* hero */
+.hero{padding:96px 0 110px;border-bottom:1px solid var(--line)}
+.hero-in{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:72px;align-items:center}
+.lede{font-size:21px;line-height:1.6;color:var(--ink);margin-top:28px;max-width:560px}
+.limit{font-size:15px;color:var(--muted);margin-top:18px;max-width:520px;padding-left:16px;border-left:1px solid var(--gold-line)}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:40px}
+
+/* the arch: a Roman niche with a gold hairline */
+.arch{margin:0}
+.arch-frame{position:relative;aspect-ratio:4 / 5;border-radius:999px 999px 3px 3px;overflow:hidden;outline:1px solid var(--gold-line);outline-offset:12px}
+.arch-frame img{width:100%;height:100%;object-fit:cover;object-position:52% 50%}
+.arch figcaption{margin-top:26px;font-size:12px;color:var(--muted);text-align:center;font-style:italic}
+
+/* bands */
+.band{padding:120px 0;border-bottom:1px solid var(--line)}
+.band p{color:var(--muted)}
+.band p.strong{font-family:var(--head);font-size:28px;line-height:1.35;color:var(--ink);margin-top:30px}
+.ornament{display:flex;justify-content:center;margin-bottom:34px}
+.ornament span{position:relative;display:block;width:90px;height:1px;background:var(--gold-line)}
+.ornament span::after{content:"";position:absolute;left:50%;top:50%;width:7px;height:7px;border:1px solid var(--gold);background:var(--bg);transform:translate(-50%,-50%) rotate(45deg)}
+#focus h2,#standard h2{text-align:center}
+
+.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin-top:56px}
+.three>div{background:var(--bg);padding:44px 36px}
+.num{display:block;font-family:var(--head);font-size:40px;color:var(--gold);line-height:1;margin-bottom:22px}
+.three h3{font-size:26px;margin-bottom:12px}
+.across{text-align:center;max-width:720px;margin:48px auto 0;font-size:19px}
+
+.offers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px;margin-top:56px}
+.offer{background:var(--card);border:1px solid var(--line);padding:48px 44px;display:flex;flex-direction:column}
+.offer h3{margin-top:16px}
+.offer .for{margin-top:10px;color:var(--ink);font-size:16px}
+.offer ul{list-style:none;margin:26px 0 36px;flex:1}
+.offer li{position:relative;padding:12px 0 12px 22px;border-top:1px solid var(--line);font-size:16px;color:var(--muted)}
+.offer li::before{content:"";position:absolute;left:2px;top:23px;width:6px;height:6px;border:1px solid var(--gold);transform:rotate(45deg)}
+.offer .btn{align-self:flex-start}
+
+.rooms{padding:100px 0}
+.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+.photos img{width:100%;aspect-ratio:16 / 10;object-fit:cover;border-radius:2px;filter:saturate(.92)}
+.photos figcaption{margin-top:12px;font-size:12.5px;color:var(--muted)}
+.press{margin-top:56px;display:flex;flex-wrap:wrap;align-items:baseline;justify-content:center;gap:10px 26px;padding-top:36px;border-top:1px solid var(--line)}
+.press ul{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px 26px}
+.press a,.press li span{font-family:var(--head);font-size:19px;color:#CFC8BA;text-decoration:none;white-space:nowrap}
+.press a:hover{color:var(--gold)}
+
+.standard{list-style:none;counter-reset:s;margin-top:20px}
+.standard li{counter-increment:s;position:relative;padding:22px 0 22px 64px;border-top:1px solid var(--line);color:var(--muted);font-size:18px}
+.standard li:last-child{border-bottom:1px solid var(--line)}
+.standard li::before{content:counter(s,upper-roman);position:absolute;left:0;top:18px;font-family:var(--head);font-size:26px;color:var(--gold);width:48px}
+.notfor{margin-top:56px;padding:34px 38px;border:1px solid var(--gold-line)}
+.notfor ul{list-style:none;margin-top:14px}
+.notfor li{padding:6px 0;color:var(--muted);font-size:16px}
+.investment{margin-top:44px;font-size:18px}
+.investment .eyebrow{display:block;margin-bottom:10px}
+
+/* application */
+.apply{background:var(--bg-2)}
+.apply .sub{margin-bottom:46px}
+.app fieldset{border:0;margin:0 0 30px}
+.app legend,.app label{display:block;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.app label em{font-style:normal;font-weight:400;letter-spacing:.04em;text-transform:none;color:#7E786E}
+.choice label,.needs label{display:flex;align-items:center;gap:12px;padding:15px 18px;border:1px solid var(--line);margin-bottom:10px;cursor:pointer;font-size:16px;font-weight:400;letter-spacing:0;text-transform:none;color:var(--ink);transition:border-color .2s,background .2s}
+.choice label:hover,.needs label:hover{border-color:var(--gold-line)}
+.choice label:has(input:checked),.needs label:has(input:checked){border-color:var(--gold);background:rgba(201,169,98,.07)}
+.needs{display:grid;grid-template-columns:1fr 1fr;gap:0 10px}
+.needs legend{grid-column:1 / -1}
+.app input[type=radio],.app input[type=checkbox]{accent-color:var(--gold);width:17px;height:17px;flex:none}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px 24px;margin-bottom:30px}
+.app input:not([type=radio]):not([type=checkbox]),.app select,.app textarea{
+  width:100%;min-height:52px;padding:12px 14px;background:#0B0B0B;color:var(--ink);
+  border:1px solid #34322E;border-radius:2px;font:inherit;font-size:16px;font-weight:400;
+}
+.app textarea{min-height:140px;resize:vertical;line-height:1.6}
+.app select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--gold) 50%),linear-gradient(135deg,var(--gold) 50%,transparent 50%);background-position:calc(100% - 20px) 23px,calc(100% - 14px) 23px;background-size:6px 6px;background-repeat:no-repeat;padding-right:40px}
+.app input:focus,.app select:focus,.app textarea:focus{outline:none;border-color:var(--gold)}
+.app [aria-invalid=true]{border-color:#C0392B}
+.full{margin-bottom:34px}
+.trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.app .btn{width:100%}
+.err{min-height:24px;margin-top:14px;color:#E3796D;font-size:15px;text-align:center}
+.fine{font-size:13px;text-align:center;color:#7E786E}
+.done{text-align:center;padding:30px 0}
+.done h3{font-size:36px;margin-bottom:16px}
+.done:focus{outline:none}
+
+footer{padding:40px 0 48px}
+.foot-in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#7E786E}
+footer a{color:var(--muted);text-decoration:none}
+footer a:hover{color:var(--gold)}
+
+@media (max-width:980px){
+  .nav a.plain{display:none}
+  .hero-in{grid-template-columns:1fr;gap:56px}
+  .arch{max-width:380px;margin:0 auto;width:100%}
+  .three{grid-template-columns:1fr}
+  .offers,.photos{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .shell{padding:0 20px}
+  .brand{font-size:15px}
+  .hero{padding:56px 0 72px}
+  .band{padding:76px 0}
+  .lede{font-size:19px}
+  .three>div{padding:34px 26px}
+  .offer{padding:36px 26px}
+  .offer .btn,.cta .btn{width:100%}
+  .grid,.needs{grid-template-columns:1fr}
+  .notfor{padding:26px 22px}
+  .standard li{padding-left:52px}
+  .band p.strong{font-size:24px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
