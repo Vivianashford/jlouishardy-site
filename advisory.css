@@ -99,9 +99,24 @@ p+p{margin-top:16px}
 .offer .btn{align-self:flex-start}
 
 .rooms{padding:100px 0}
-.photos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
-.photos img{width:100%;aspect-ratio:16 / 10;object-fit:cover;border-radius:2px;filter:saturate(.92)}
-.photos figcaption{margin-top:12px;font-size:12.5px;color:var(--muted)}
+.rooms .eyebrow{display:block;margin-bottom:34px}
+.gallery{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:22px}
+.gallery figure{margin:0;min-width:0}
+.gallery img{width:100%;object-fit:cover;border-radius:2px;filter:saturate(.9)}
+.g-a,.g-b{--h:clamp(300px,40vw,500px)}
+.g-c,.g-d,.g-e{--h:clamp(240px,27vw,350px)}
+.g-f,.g-g{--h:clamp(240px,30vw,380px)}
+.gallery img{height:var(--h)}
+.g-a{grid-column:span 4}.g-b{grid-column:span 2}
+.g-c,.g-d,.g-e{grid-column:span 2}
+.g-f,.g-g{grid-column:span 3}
+.g-b img{object-position:50% 40%}
+.g-c img{object-position:32% 40%}
+.g-d img{object-position:50% 55%}
+.g-e img{object-position:50% 58%}
+.g-f img{object-position:30% 50%}
+.g-g img{object-position:45% 50%}
+.gallery figcaption{margin-top:12px;font-size:12.5px;color:var(--muted)}
 .press{margin-top:64px;padding-top:44px;border-top:1px solid var(--line);text-align:center}
 .press-label{display:block;margin-bottom:30px}
 .logos{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px 56px}
@@ -159,7 +174,7 @@ footer a:hover{color:var(--gold)}
   .hero-in{grid-template-columns:1fr;gap:56px}
   .arch{max-width:380px;margin:0 auto;width:100%}
   .three{grid-template-columns:1fr}
-  .offers,.photos{grid-template-columns:1fr}
+  .offers{grid-template-columns:1fr}
 }
 @media (max-width:640px){
   .shell{padding:0 20px}
@@ -171,6 +186,11 @@ footer a:hover{color:var(--gold)}
   .offer{padding:36px 26px}
   .offer .btn,.cta .btn{width:100%}
   .grid,.needs{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+  .g-a,.g-f,.g-g{grid-column:1 / -1}
+  .g-b,.g-c,.g-d,.g-e{grid-column:span 1}
+  .g-a,.g-f,.g-g{--h:clamp(210px,58vw,320px)}
+  .g-b,.g-c,.g-d,.g-e{--h:clamp(200px,56vw,280px)}
   .logos{display:grid;grid-template-columns:repeat(2,auto);justify-content:center;justify-items:center;gap:30px 48px}
   .l-gq{height:24px}.l-bi{height:27px}.l-dj{height:14px}.l-nyw{height:19px}.l-ust{height:14px}.l-dis{height:16px}
   .notfor{padding:26px 22px}
