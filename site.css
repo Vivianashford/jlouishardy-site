@@ -98,6 +98,15 @@ p + p{margin-top:18px}
 .quiet-text{color:var(--gray-text)}
 .small{font-size:15px;color:var(--gray-text)}
 
+/* ---------- mission ---------- */
+.mission-in{position:relative;padding:56px 0 52px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
+.mission-in::before,.mission-in::after{content:"";position:absolute;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold);transform:translateY(-50%)}
+.mission-in::before{top:0}
+.mission-in::after{top:100%}
+.mission h2{font-size:clamp(30px,4.2vw,44px);line-height:1.14;margin-bottom:0}
+.mission h2 span{display:block;margin-top:14px;color:var(--gold-deep)}
+.mission .charge{margin-top:30px;padding-left:18px;border-left:2px solid var(--gold);font-size:clamp(18px,2vw,20px);line-height:1.6;color:var(--ink)}
+
 /* ---------- hero ---------- */
 .hero{padding-top:34px}
 .hero .lede{margin-top:20px}
