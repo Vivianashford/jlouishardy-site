@@ -41,9 +41,6 @@ img{display:block;max-width:100%;height:auto}
 .nav a.plain{color:var(--gray-text);text-decoration:none;font-size:15px}
 .nav a.plain:hover{color:var(--ink)}
 .nav a.tab[aria-current=page]{color:var(--ink);font-weight:700;box-shadow:0 2px 0 var(--gold)}
-/* the Executive Advisory tab: its own colour, gold on black */
-.nav a.exec{display:inline-flex;align-items:center;min-height:40px;padding:0 16px;border-radius:6px;background:#0E0E0E;color:#C9A962;border:1px solid #C9A962;font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;white-space:nowrap}
-.nav a.exec:hover{background:#C9A962;color:#0E0E0E}
 
 .btn{
   display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;
@@ -98,15 +95,6 @@ p + p{margin-top:18px}
 .quiet-text{color:var(--gray-text)}
 .small{font-size:15px;color:var(--gray-text)}
 
-/* ---------- mission ---------- */
-.mission-in{position:relative;padding:56px 0 52px;border-top:1px solid var(--gold);border-bottom:1px solid var(--gold)}
-.mission-in::before,.mission-in::after{content:"";position:absolute;left:0;width:9px;height:9px;border-radius:50%;background:var(--gold);transform:translateY(-50%)}
-.mission-in::before{top:0}
-.mission-in::after{top:100%}
-.mission h2{font-size:clamp(30px,4.2vw,44px);line-height:1.14;margin-bottom:0}
-.mission h2 span{display:block;margin-top:14px;color:var(--gold-deep)}
-.mission .charge{margin-top:30px;padding-left:18px;border-left:2px solid var(--gold);font-size:clamp(18px,2vw,20px);line-height:1.6;color:var(--ink)}
-
 /* ---------- hero ---------- */
 .hero{padding-top:34px}
 .hero .lede{margin-top:20px}
@@ -142,42 +130,29 @@ p + p{margin-top:18px}
 .logos img{display:block;width:auto;opacity:.5;transition:opacity .2s}
 .logos a:hover img{opacity:.9}
 .l-gq{height:20px}.l-bi{height:22px}.l-dj{height:12px}.l-nyw{height:16px}.l-ust{height:12px}.l-dis{height:13px}
-.nods{list-style:none;margin-top:8px}
-.nods li{position:relative;padding:16px 0 16px 34px;border-top:1px solid var(--line);font-size:19px;line-height:1.5}
-.nods li:last-child{border-bottom:1px solid var(--line)}
-.nods li::before{content:"";position:absolute;left:4px;top:26px;width:11px;height:11px;border-radius:50%;background:var(--gold)}
-.turn{margin-top:28px;font-size:19px;line-height:1.5}
-.after-nods{margin-top:24px;font-weight:600}
 
+/* the five roots: Roman numerals, the name in the heading face */
+.roots{list-style:none;margin-top:34px;counter-reset:r}
+.roots li{counter-increment:r;position:relative;padding:24px 0 24px 60px;border-top:1px solid var(--line)}
+.roots li:last-child{border-bottom:1px solid var(--line)}
+.roots li::before{content:counter(r,upper-roman);position:absolute;left:0;top:22px;width:48px;font-family:var(--head);font-size:26px;line-height:1.2;color:var(--gold-deep)}
+.roots h3{font-family:var(--head);font-weight:400;font-size:27px;line-height:1.2;letter-spacing:0}
+.roots h3 span{color:var(--gold-deep)}
+.roots p{margin-top:8px;font-size:17px;line-height:1.6}
+.turn{margin-top:30px;font-size:19px;line-height:1.5}
+
+/* the five steps of the work, each tagged with its root */
 .parts{list-style:none;margin-top:30px;counter-reset:s}
 .parts > li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;padding:22px 0;border-top:1px solid var(--line)}
 .parts > li:last-child{border-bottom:1px solid var(--line)}
 .parts > li::before{content:counter(s);font-size:21px;font-weight:700;color:var(--gold-deep);line-height:1.3}
 .parts p{margin-top:4px;color:var(--gray-text)}
-.parts .names{margin-top:8px;font-size:15px;color:var(--ink)}
-
-.areas{margin-top:26px}
-.areas .top{border:1px solid var(--gold);border-radius:6px;padding:13px 18px;color:var(--gold-deep)}
-.areas .stem{width:1px;height:14px;background:var(--gray);margin:0 auto}
-.areas .fruit{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.areas .fruit div{border:1px solid var(--gray);border-radius:6px;padding:13px 18px}
-.areas .fruit div.seen{border-color:var(--ink)}
-.areas strong{display:block;font-size:16px}
-.areas span{display:block;font-size:14px;line-height:1.4;color:var(--gray-text);margin-top:2px}
-
-.three{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
-.three div{border-left:1px solid var(--gold);padding-left:14px}
-.three strong{display:block;font-size:17px}
-.three span{display:block;font-size:15px;line-height:1.45;color:var(--gray-text);margin-top:2px}
+.steps .root{display:block;font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:6px}
+.steps p{color:var(--ink);font-size:17px}
 
 .art{margin:0 0 40px}
 .art img{width:100%;aspect-ratio:3 / 1;object-fit:cover;border-radius:2px}
 .art figcaption{margin-top:10px;font-size:12.5px;color:var(--gray-text);text-align:right}
-
-.sample{margin-top:34px;padding:26px 28px;background:var(--tint);border-radius:8px}
-.sample .from{font-size:13px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-deep)}
-.sample p{margin-top:12px;font-size:17px}
-.sample .carry{font-family:var(--head);font-size:26px;line-height:1.25;margin-top:18px;color:var(--ink)}
 
 .aside{margin-top:28px;padding-left:16px;border-left:2px solid var(--red);font-size:18px}
 .aside small{display:block;font-size:14px;color:var(--gray-text);margin-top:2px}
@@ -234,10 +209,6 @@ footer a{color:var(--gray-text)}
   .nav a.plain{display:none}
   .nav a.tab{display:inline}
   .logos{display:grid;grid-template-columns:repeat(3,auto);justify-content:start;align-items:center;gap:22px 30px}
-  html{scroll-padding-top:calc(var(--head-h) + 58px)}
-  .head{padding-top:34px}
-  .nav a.exec{position:absolute;top:0;left:0;right:0;min-height:34px;height:34px;justify-content:center;border:0;border-radius:0;font-size:11px;letter-spacing:.2em}
-  .nav a.exec::after{content:"\2192";margin-left:10px;letter-spacing:0}
   .btn.small{white-space:nowrap}
   .brand{font-size:16px;gap:8px}
   .btn.small{padding:0 12px;font-size:14px}
@@ -247,10 +218,10 @@ footer a{color:var(--gray-text)}
   .offer-card .cover{width:64px}
   .offer-card .what{align-self:center;margin-bottom:0}
   .get .row{grid-template-columns:1fr}
-  .nods li{font-size:17px}
   .turn{font-size:17px}
-  .three{grid-template-columns:1fr;gap:12px}
-  .areas .fruit{grid-template-columns:1fr;gap:8px}
+  .roots li{padding-left:46px}
+  .roots li::before{font-size:22px;width:40px}
+  .roots h3{font-size:24px}
   .about{grid-template-columns:96px 1fr;gap:18px}
   .about img{width:96px}
   .bio-top{grid-template-columns:1fr;gap:22px}
@@ -258,7 +229,6 @@ footer a{color:var(--gray-text)}
   .group{padding:24px 20px}
   .cta .btn{flex:1 1 100%}
   .btn.big{font-size:18px;padding:0 18px;min-height:58px}
-  .sample{padding:22px 20px}
   .art img{aspect-ratio:7 / 3}
   .cal{height:960px}
 }
