@@ -108,6 +108,19 @@ p + p{margin-top:18px}
 .offer-card form{grid-area:form}
 .offer-card .what strong{color:var(--ink)}
 
+/* ---------- the four parts of a life, drawn thin: you are here, you need to be here ---------- */
+.four{display:flex;align-items:flex-end;gap:0 38px;margin:68px 0 0}
+.four .state{flex:none}
+.four .state-label{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-deep);margin:0}
+.four .state-label.need{color:var(--red)}
+.four .state-sub{font-family:var(--head);font-size:20px;line-height:1.15;color:var(--ink);margin:10px 0 20px}
+.four .boxes{list-style:none;display:grid;grid-template-columns:repeat(2,120px);gap:12px;margin:0;padding:0}
+.four .boxes li{height:34px;display:flex;align-items:center;justify-content:center;border:1px solid #D4C4A0;border-radius:4px;background:#fff;font-size:11.5px;letter-spacing:.05em;color:var(--gray-text);white-space:nowrap}
+.four .boxes li.full{background:var(--gold);border-color:var(--gold);color:#fff;font-weight:600}
+.four .between{flex:none;width:64px;align-self:flex-end;margin-bottom:24px}
+.four .swirl{width:100%;height:auto;display:block}
+.hero .four + .offer-card{margin-top:76px}
+
 /* ---------- the sign-up form ---------- */
 .get label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
 .get .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -214,6 +227,13 @@ footer a{color:var(--gray-text)}
   .btn.small{padding:0 12px;font-size:14px}
   section{padding-top:72px}
   .hero{padding-top:28px}
+  .four{gap:0 16px;margin-top:48px}
+  .four .boxes{grid-template-columns:118px;gap:10px}
+  .four .state-label{font-size:9px;letter-spacing:.16em}
+  .four .state-sub{font-size:17px;margin:8px 0 16px}
+  .four .boxes li{height:32px}
+  .four .between{width:50px;margin-bottom:68px}
+  .hero .four + .offer-card{margin-top:56px}
   .offer-card{grid-template-columns:64px 1fr;grid-template-areas:"cover what" "form form";column-gap:16px;row-gap:14px;padding:18px}
   .offer-card .cover{width:64px}
   .offer-card .what{align-self:center;margin-bottom:0}
@@ -237,6 +257,13 @@ footer a{color:var(--gray-text)}
 }
 @media (max-width:359px){
   .nav a.tab{display:none}
+  .four{gap:0 12px}
+  .four .state{flex:0 1 auto;min-width:0;width:104px}
+  .four .boxes{grid-template-columns:104px}
+  .four .boxes li{font-size:10.5px}
+  .four .state-label{font-size:8.5px;letter-spacing:.12em}
+  .four .state-sub{font-size:16px}
+  .four .between{width:40px;margin-bottom:62px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
