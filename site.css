@@ -208,7 +208,7 @@ p + p{margin-top:18px}
 
 footer{border-top:1px solid var(--line);padding:28px 0 40px;font-size:14px;color:var(--gray-text)}
 footer .col{margin-left:var(--rail-col);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-footer a{color:var(--gray-text)}
+footer a{white-space:nowrap;color:var(--gray-text)}
 
 /* ---------- smaller screens ---------- */
 @media (max-width:1000px){
@@ -234,12 +234,13 @@ footer a{color:var(--gray-text)}
   .btn.small{padding:0 12px;font-size:14px}
   section{padding-top:72px}
   .hero{padding-top:28px}
-  .four{gap:0 16px;margin-top:48px}
-  .four .boxes{grid-template-columns:118px;gap:10px}
+  .four{display:grid;grid-template-columns:minmax(0,1fr) 44px minmax(0,1fr);align-items:end;gap:0 12px;margin-top:48px}
+  .four .state{min-width:0}
+  .four .boxes{grid-template-columns:1fr;gap:10px}
   .four .state-label{font-size:9px;letter-spacing:.16em}
   .four .state-sub{font-size:17px;margin:8px 0 16px}
   .four .boxes li{height:32px}
-  .four .between{width:50px;margin-bottom:68px}
+  .four .between{width:44px;margin-bottom:68px}
   .hero .four + .offer-card{margin-top:56px}
   .offer-card{grid-template-columns:64px 1fr;grid-template-areas:"cover what" "form form";column-gap:16px;row-gap:14px;padding:18px}
   .offer-card .cover{width:64px}
@@ -249,7 +250,7 @@ footer a{color:var(--gray-text)}
   .roots li{padding-left:46px}
   .roots li::before{font-size:22px;width:40px}
   .roots h3{font-size:24px}
-  .about{grid-template-columns:96px 1fr;gap:18px}
+  .about{grid-template-columns:1fr;gap:18px}
   .about img{width:96px}
   .bio-top{grid-template-columns:1fr;gap:22px}
   .bio-top img{order:-1;max-width:180px}
@@ -264,13 +265,11 @@ footer a{color:var(--gray-text)}
 }
 @media (max-width:359px){
   .nav a.tab{display:none}
-  .four{gap:0 12px}
-  .four .state{flex:0 1 auto;min-width:0;width:104px}
-  .four .boxes{grid-template-columns:104px}
+  .four{gap:0 8px;grid-template-columns:minmax(0,1fr) 36px minmax(0,1fr)}
   .four .boxes li{font-size:10.5px}
   .four .state-label{font-size:8.5px;letter-spacing:.12em}
-  .four .state-sub{font-size:16px}
-  .four .between{width:40px;margin-bottom:62px}
+  .four .state-sub{font-size:14.5px;white-space:nowrap}
+  .four .between{width:36px;margin-bottom:68px}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
